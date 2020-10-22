@@ -125,7 +125,6 @@ def rfc_predict(data, k):
 
     return predictions, targets
 
-
 def best_rfc(data, k):
     """
     Finds the most optimized random forest classifer (checks till number of estimators = k)
