@@ -138,6 +138,3 @@ def best_rfc(data, k):
             acc = accuracy
             pred = predicted
     return pred, targets
-
-p, a = best_rfc(data, 50)
-print(calculate_accuracy(p, a))
