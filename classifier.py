@@ -15,7 +15,7 @@ def split_data(data, train_frac):
     Returns training and testing set based on the training fraction
     """
     np.random.seed(0) # Ensure results are same when trying to run this function
-    np.random.shuffle(data) # Shuffle the data for smooth division of dataset
+    np.random.shuffle(data) # Shuffle the data to ensure unbiasness
     split_index = int(len(data) * train_frac)
     train_set = data[:split_index]
     test_set = data[split_index:]
