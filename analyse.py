@@ -1,6 +1,3 @@
-"""
-Inspiration from KNN Classifier Stanford's CS231 Pset
-"""
 from classifier import *
 from knn import KNearestNeighbours
 import matplotlib.pyplot as plt

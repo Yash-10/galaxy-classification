@@ -1,3 +1,6 @@
+"""
+Reference: KNN Classifier Stanford's CS231 Pset
+"""
 import numpy as np
 
 class KNearestNeighbours():
