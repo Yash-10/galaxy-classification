@@ -23,6 +23,8 @@ num_test = int(len(data) * test_frac)
 random.shuffle(data)
 data = pd.DataFrame(data)
 
+print(data[data['class'] == 'spiral'].count())
+
 print(f"No. of merger galaxies: {data[data['class'] == 'merger'].shape[0]}")
 print(f"No. of elliptical galaxies: {data[data['class'] == 'elliptical'].shape[0]}")
 print(f"No. of spiral galaxies: {data[data['class'] == 'spiral'].shape[0]}")
