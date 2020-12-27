@@ -8,7 +8,6 @@ import random
 
 data = np.load("galaxy_catalogue.npy") # unbalanced data
 
-
 # depth = best_tree_depth(data, 20)
 #
 # print(f"The most optimal depth for decision tree is: {depth}")
@@ -28,7 +27,6 @@ print(f"No. of merger galaxies: {data[data['class'] == 'merger'].shape[0]}")
 print(f"No. of elliptical galaxies: {data[data['class'] == 'elliptical'].shape[0]}")
 print(f"No. of spiral galaxies: {data[data['class'] == 'spiral'].shape[0]}")
 
-
 feed_data = np.array(data.loc[:, data.columns != 'class'])
 labels = np.array(data.loc[:, data.columns == 'class'])
 
@@ -44,4 +42,4 @@ pred_labels = knn_classifier.predict_labels(dists)
 
 num_correct = np.sum(pred_labels == y_test)
 accuracy = float(num_correct) / num_test
-print(f"Accuracy: {accuracy}")
+print(f"Test Accuracy: {accuracy}")
