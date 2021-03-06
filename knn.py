@@ -39,25 +39,25 @@ class KNearestNeighbours():
         return dists
 
     def predict_labels(self, dists, k=1):
-            num_test = dists.shape[0]
-            y_pred = list()
+        num_test = dists.shape[0]
+        y_pred = list()
 
-            for i in range(num_test):
-                closest_y = []
-                indices = np.argsort(dists[i, :])
-                we_want = indices[:k]
-                k_values = dists[i, :][indices][:k]
-                labels = self.y_train[we_want]
-                closest_y = list(labels)
+        for i in range(num_test):
+            closest_y = []
+            indices = np.argsort(dists[i, :])
+            we_want = indices[:k]
+            k_values = dists[i, :][indices][:k]
+            labels = self.y_train[we_want]
+            closest_y = list(labels)
 
-                count = 0
-                num = closest_y[0]
-                for elem in closest_y:
-                  curr_count = closest_y.count(elem)
-                  if curr_count > count:
-                    count = curr_count
-                    num = elem
-                #y_pred[i] = count
-                y_pred.append(num[0])
+            count = 0
+            num = closest_y[0]
+            for elem in closest_y:
+              curr_count = closest_y.count(elem)
+              if curr_count > count:
+                count = curr_count
+                num = elem
+            #y_pred[i] = count
+            y_pred.append(num[0])
 
-            return y_pred[0]
+        return y_pred[0]
